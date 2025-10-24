@@ -12,11 +12,11 @@ Este projeto é uma ferramenta gráfica para compactação e organização de ar
 
 ## Tecnologias utilizadas:
 
-Python
-Tkinter (interface gráfica)
-PyPDF2 (manipulação de PDFs)
-Ghostscript (compactação de PDFs)
-Pillow (PIL) (manipulação de imagens para ícones e logos)
+- Python
+- Tkinter (interface gráfica)
+- PyPDF2 (manipulação de PDFs)
+- Ghostscript (compactação de PDFs)
+- Pillow (PIL) (manipulação de imagens para ícones e logos)
 
 ## Funcionalidades principais:
 
