@@ -30,7 +30,7 @@ GS_EXEC = find_ghostscript_executable()
 if not GS_EXEC:
     raise SystemExit("Ghostscript não encontrado no PATH. Instale e adicione.")
 
-# ======= COMPACTAR / DIVIDIR =======
+# ======= COMPACTAR =======
 
 def compactar_pdf(input_path, output_path, quality=QUALITY_PRESET):
     cmd = [
@@ -55,6 +55,7 @@ def compactar_pdf(input_path, output_path, quality=QUALITY_PRESET):
         startupinfo=startupinfo
     )
     
+# ========== DIVIDIR ========== 
 
 def file_size_mb(path):
     return os.path.getsize(path) / (1024 * 1024)
@@ -142,7 +143,7 @@ def try_split_until_ok(input_pdf, dest_dir, base_name, log_func=print):
                 return final_paths
             N = min(total_pages, N * 2)
             
-# ======= PROCESSAMENTO =======
+# ======= PROCESSAR =======
 
 def process_folder(folder_path, log_func=print):
     folder_path = os.path.normpath(folder_path)
@@ -246,3 +247,4 @@ log_text = scrolledtext.ScrolledText(root, width=80, height=20)
 log_text.pack(padx=10, pady=10)
 
 root.mainloop()
+
